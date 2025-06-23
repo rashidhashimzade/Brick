@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BattleBrick – Matchmaking</title>
+    <link rel="stylesheet" href="styles/matchmaking.css" />
+</head>
+<body>
+    <div id="matchmaking-container">
+        <div class="card">
+            <img src="assets/logo.png" alt="BattleBrick Logo" class="logo" />
+            <h2>Finding an Opponent...</h2>
+            <div class="spinner"></div>
+            <p class="subtext">Hang tight, we’re pairing you up!</p>
+            <button id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        document.getElementById('cancel-btn').onclick = () => {
+            // go back to homepage
+            window.location.href = 'index.html';
+        };
+        socket.on('wall-data', () => {
+            window.location.href = 'game.html';
+        });
+    </script>
+</body>
+</html>

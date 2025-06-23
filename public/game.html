@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BattleBrick</title>
+    <link rel="stylesheet" href="styles/game.css" />
+</head>
+
+<body>
+    <header id="top-bar">
+        <div id="logo-container">
+            <img src="assets/logo.png" alt="Game Logo" id="logo" />
+            <span id="game-name">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="red-text">Battle</span><span class="black-text">Brick</span>
+                </a>
+            </span>
+        </div>
+    </header>
+
+    <div id="outer-wrapper">
+        <!-- Left panel: player info and turn -->
+        <div id="info-panel">
+            <div id="player-number">Waiting for role...</div>
+            <div id="turn-status">Waiting for turn...</div>
+        </div>
+
+        <div id="container">
+            <div id="opponent-timer-bar">Opponent time: 10:00</div>
+            <div id="game-area">
+                <div id="wall"></div>
+                <div id="panel"></div>
+            </div>
+            <div id="timer-bar">
+                <span id="timerSelf">You: 10:00</span>
+            </div>
+        </div>
+
+        <div id="chat-column">
+            <div id="chat">
+                <div id="messages"></div>
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" />
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/game.js"></script>
+</body>
+
+</html>

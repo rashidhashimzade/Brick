@@ -1,0 +1,83 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-screen dark backdrop */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1e2e, #24242f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Centered card */
+#matchmaking-container {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+}
+
+.card {
+    background: #2e2e3c;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    padding: 30px 20px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+    .card .logo {
+        height: 60px;
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #ffa500;
+    }
+
+/* Spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border: 6px solid rgba(255,255,255,0.2);
+    border-top-color: #ffa500;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card .subtext {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+/* Cancel button */
+#cancel-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    background: #dc143c;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    #cancel-btn:hover {
+        background: #ff5a5a;
+    }

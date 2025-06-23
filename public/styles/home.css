@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('../assets/hero-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #252525;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#logo {
+    height: 56px;
+    width: auto;
+}
+
+#game-name {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.red-text {
+    color: #dc143c;
+}
+
+.black-text {
+    color: white;
+}
+
+#hero-section {
+    background: linear-gradient( 135deg, #1e1e2f 0%, #2c2c3e 100% );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffa500;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+#main-content {
+    background: #ffffff;
+    color: #333;
+    padding: 40px 20px;
+}
+#play-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#time-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.time-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+    .time-btn:hover {
+        background-color: #357abd;
+    }
+
+    .time-btn:disabled {
+        background-color: #888;
+        cursor: not-allowed;
+    }
+
+
+    #play-btn:hover {
+        background-color: #357abd;
+    }
